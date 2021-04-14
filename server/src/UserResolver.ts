@@ -45,7 +45,7 @@ export class UserResolver {
   @Query(() => String)
   protectedQuery(@Ctx() { payload }: MyContext) {
     console.log(payload);
-    return `Your userId is: ${payload?.userId}`;
+    return `Your userId is: ${payload?.userId}. Paid Schemes are ${payload?.validCodes}`;
   }
 
   //TO INVALIDATE A TOKEN FOR A PARTICULAR USER, CHANGE THE TOKEN VERSION.
